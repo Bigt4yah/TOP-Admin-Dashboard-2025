@@ -1,0 +1,14 @@
+/* 
+1. Entire page will be a grid
+2. Sidebar will take up the entire 1st column and be 1fr. Rest of the content will be 4fr
+3. Sidebar will take up all rows within the 1st column
+4. Header will be another grid -- maybe 5 x 3
+5. Header first row will take up row 1 and all columns
+6. Header second row will take up rows 2 + 3 and all columns
+7. Main content will be another grid -- maybe 4 x 10 (rows x columns)
+8. Your Projects element will take up row 1, columns 1 - 3
+9. Project cards below Your Projects will take up rows 2 - 4, columns 1 -3
+10. Announcments element will take up row 1, column 4
+11. Content in Announcments content will take up row 2 - 3, column 4
+12. Trending element will take up row 4, column 4
+*/
