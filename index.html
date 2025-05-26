@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body> 
-    <div id="container">
+    <div id="container"> <!-- Grid -->
         <div id="sidebar"> <!-- Grid -->
             <div class="sidebar-content">
                 <img src="IMAGE FOR DASHBOARD">
@@ -56,7 +56,7 @@
                 <img src="MAGNIFYING GLASS IMAGE">
                 <input id="search-bar-box" type="text">
             </div>
-            <div id="condensed-user-info">
+            <div id="condensed-user-info"> <!-- Flex -->
                 <button>
                     <img src="BELL IMAGE">
                 </button>
@@ -65,21 +65,26 @@
                     Troy D
                 </div>
             </div>
-            <div id="expanded-user-info">
-                <img id="profile-pic" src="PROFILE IMG">
-                <div>
+            <div id="expanded-user-info"> <!-- Flex -->
+                <div id="greet"> <!-- Flex -->
+                    <img id="profile-pic" src="PROFILE IMG">
+                <div id="greet-msg"> <!-- Flex -->
                     <span>Hi there,</span>
                     <span>Troy D (@bigt4yah)</span>
+                </div>   
                 </div>
-                <button id="new-button">
-                    New
-                </button>
-                <button id="upload-button">
-                    Upload
-                </button>
-                <button id="Share">
-                    Share
-                </button>
+                
+                <div id="admin-btns"> <!-- Flex -->
+                    <button id="new-button">
+                        New
+                    </button>
+                    <button id="upload-button">
+                        Upload
+                    </button>
+                    <button id="Share">
+                        Share
+                    </button>
+                </div>                
             </div>
         </div>
 
@@ -88,147 +93,158 @@
                 <div id="project-header">
                     Your Projects
                 </div>
-                <div class="project-card">
-                    <div class="project-card-header">
-                        <a href="https://bigt4yah.github.io/TOP-Foundation-Landing-Page/">
-                            TOP-Foundation-Landing-Page
-                        </a>
+                <div id="project-card-container">
+                    <div class="project-card"> <!-- Flex -->
+                        <div class="project-card-header">
+                            <a href="https://bigt4yah.github.io/TOP-Foundation-Landing-Page/">
+                                TOP-Foundation-Landing-Page
+                            </a>
+                        </div>
+                        <div class="project-card-detail">
+                            The Odin Project -- Foundation Landing Page 2025
+                        </div>
+                        <div class="project-card-btns"> <!-- Flex -->
+                            <button>
+                                <img src="IMAGE FOR STAR BTN">
+                            </button>
+                            <button>
+                                <img src="IMAGE FOR VIEWS BTN">
+                            </button>
+                            <button>
+                                <img src="IMAGE FOR SHARE BTN">
+                            </button>
+                        </div>
                     </div>
-                    <div class="project-card-detail">
-                        The Odin Project -- Foundation Landing Page 2025
+    
+                    <div class="project-card">
+                        <div class="project-card-header">
+                            <a href="https://bigt4yah.github.io/TOP-Rock-Paper-Scissors-2025/">
+                                TOP-Rock-Paper-Scissors-2025
+                            </a>
+                        </div>
+                        <div class="project-card-detail">
+                            The Odin Project -- Rock Paper Scissors 2025
+                        </div>
+                        <div class="project-card-btns"> <!-- Flex -->
+                            <button>
+                                <img src="IMAGE FOR STAR BTN">
+                            </button>
+                            <button>
+                                <img src="IMAGE FOR VIEWS BTN">
+                            </button>
+                            <button>
+                                <img src="IMAGE FOR SHARE BTN">
+                            </button>
+                        </div>
                     </div>
-                    <div class="project-card-btns"> <!-- Flex -->
-                        <button>
-                            <img src="IMAGE FOR STAR BTN">
-                        </button>
-                        <button>
-                            <img src="IMAGE FOR VIEWS BTN">
-                        </button>
-                        <button>
-                            <img src="IMAGE FOR SHARE BTN">
-                        </button>
+    
+                    <div class="project-card">
+                        <div class="project-card-header">
+                            <a href="https://github.com/Bigt4yah/TOP-Etch-A-Sketch-2025">
+                                TOP-Etch-A-Sketch-2025
+                            </a>
+                        </div>
+                        <div class="project-card-detail">
+                            The Odin Project -- TOP-Etch-A-Sketch-2025
+                        </div>
+                        <div class="project-card-btns"> <!-- Flex -->
+                            <button>
+                                <img src="IMAGE FOR STAR BTN">
+                            </button>
+                            <button>
+                                <img src="IMAGE FOR VIEWS BTN">
+                            </button>
+                            <button>
+                                <img src="IMAGE FOR SHARE BTN">
+                            </button>
+                        </div>
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-card-header">
-                        <a href="https://bigt4yah.github.io/TOP-Rock-Paper-Scissors-2025/">
-                            TOP-Rock-Paper-Scissors-2025
-                        </a>
+    
+                    <div class="project-card">
+                        <div class="project-card-header">
+                            <a href="https://bigt4yah.github.io/TOP-Calculator-2025/">
+                                TOP-Calculator-2025
+                            </a>
+                        </div>
+                        <div class="project-card-detail">
+                            The Odin Project -- TOP-Calculator-2025
+                        </div>
+                        <div class="project-card-btns"> <!-- Flex -->
+                            <button>
+                                <img src="IMAGE FOR STAR BTN">
+                            </button>
+                            <button>
+                                <img src="IMAGE FOR VIEWS BTN">
+                            </button>
+                            <button>
+                                <img src="IMAGE FOR SHARE BTN">
+                            </button>
+                        </div>
                     </div>
-                    <div class="project-card-detail">
-                        The Odin Project -- Rock Paper Scissors 2025
-                    </div>
-                    <div class="project-card-btns"> <!-- Flex -->
-                        <button>
-                            <img src="IMAGE FOR STAR BTN">
-                        </button>
-                        <button>
-                            <img src="IMAGE FOR VIEWS BTN">
-                        </button>
-                        <button>
-                            <img src="IMAGE FOR SHARE BTN">
-                        </button>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-card-header">
-                        <a href="https://github.com/Bigt4yah/TOP-Etch-A-Sketch-2025">
-                            TOP-Etch-A-Sketch-2025
-                        </a>
-                    </div>
-                    <div class="project-card-detail">
-                        The Odin Project -- TOP-Etch-A-Sketch-2025
-                    </div>
-                    <div class="project-card-btns"> <!-- Flex -->
-                        <button>
-                            <img src="IMAGE FOR STAR BTN">
-                        </button>
-                        <button>
-                            <img src="IMAGE FOR VIEWS BTN">
-                        </button>
-                        <button>
-                            <img src="IMAGE FOR SHARE BTN">
-                        </button>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-card-header">
-                        <a href="https://bigt4yah.github.io/TOP-Calculator-2025/">
-                            TOP-Calculator-2025
-                        </a>
-                    </div>
-                    <div class="project-card-detail">
-                        The Odin Project -- TOP-Calculator-2025
-                    </div>
-                    <div class="project-card-btns"> <!-- Flex -->
-                        <button>
-                            <img src="IMAGE FOR STAR BTN">
-                        </button>
-                        <button>
-                            <img src="IMAGE FOR VIEWS BTN">
-                        </button>
-                        <button>
-                            <img src="IMAGE FOR SHARE BTN">
-                        </button>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-card-header">
-                        <a href="https://bigt4yah.github.io/TOP-Sign-Up-Form/">
-                            TOP-Sign-Up-Form
-                        </a>
-                    </div>
-                    <div class="project-card-detail">
-                        The Odin Project -- TOP-Sign-Up-Form
-                    </div>
-                    <div class="project-card-btns"> <!-- Flex -->
-                        <button>
-                            <img src="IMAGE FOR STAR BTN">
-                        </button>
-                        <button>
-                            <img src="IMAGE FOR VIEWS BTN">
-                        </button>
-                        <button>
-                            <img src="IMAGE FOR SHARE BTN">
-                        </button>
-                    </div>
+    
+                    <div class="project-card">
+                        <div class="project-card-header">
+                            <a href="https://bigt4yah.github.io/TOP-Sign-Up-Form/">
+                                TOP-Sign-Up-Form
+                            </a>
+                        </div>
+                        <div class="project-card-detail">
+                            The Odin Project -- TOP-Sign-Up-Form
+                        </div>
+                        <div class="project-card-btns"> <!-- Flex -->
+                            <button>
+                                <img src="IMAGE FOR STAR BTN">
+                            </button>
+                            <button>
+                                <img src="IMAGE FOR VIEWS BTN">
+                            </button>
+                            <button>
+                                <img src="IMAGE FOR SHARE BTN">
+                            </button>
+                        </div>
+                    </div>                
                 </div>
             </div>
 
             <div id="main-content-side"> <!-- Grid -->
-                <div id="announcments-container"> <!-- Flex-->
-                    <div id="announcmenets-hdr">
-                        Announcments
+                <div id="announcements-container"> <!-- Grid -->
+                    <div id="announcements-hdr">
+                        Announcements
                     </div>
 
-                    <div id="announcments-container-content">
-                        <div class="announcments-content">
-                            <div class="announcmenet-content-hdr">
+                    <div id="announcements-container-content">
+                        <div class="announcements-content">
+                            <div class="announcements-content-hdr">
                                 Site Maintenance
                             </div>
-                            <div class="announcmenet-content-msg">
+                            <div class="announcement-content-msg">
                                 Blah blah blah blah blah
                             </div>
                         </div>
 
-                        <div class="announcments-content">
-                            <div class="announcmenet-content-hdr">
+                        <div class="announcements-content">
+                            <div class="announcements-content-hdr">
                                 Site Maintenance
                             </div>
-                            <div class="announcmenet-content-msg">
+                            <div class="announcement-content-msg">
                                 Blah blah blah blah blah
                             </div>
                         </div>
 
-                        <div class="announcments-content">
-                            <div class="announcmenet-content-hdr">
+                        <div class="announcements-content">
+                            <div class="announcements-content-hdr">
                                 Site Maintenance
                             </div>
-                            <div class="announcmenet-content-msg">
+                            <div class="announcement-content-msg">
+                                Blah blah blah blah blah
+                            </div>
+                        </div>
+
+                        <div class="announcements-content">
+                            <div class="announcements-content-hdr">
+                                Site Maintenance
+                            </div>
+                            <div class="announcement-content-msg">
                                 Blah blah blah blah blah
                             </div>
                         </div>
@@ -241,7 +257,7 @@
                     </div>
 
                     <div id="trending-container-content">
-                        <div id="trending-item">
+                        <div class="trending-item">
                             <img src="SOME OTHER PROFILE PIC">
                             <div class="trending-user-info">
                                 <div class="trending-user-abbv">
@@ -253,7 +269,7 @@
                             </div>
                         </div>
 
-                        <div id="trending-item">
+                        <div class="trending-item">
                             <img src="SOME OTHER PROFILE PIC">
                             <div class="trending-user-info">
                                 <div class="trending-user-abbv">
@@ -265,7 +281,7 @@
                             </div>
                         </div>
 
-                        <div id="trending-item">
+                        <div class="trending-item">
                             <img src="SOME OTHER PROFILE PIC">
                             <div class="trending-user-info">
                                 <div class="trending-user-abbv">
@@ -277,7 +293,7 @@
                             </div>
                         </div>
 
-                        <div id="trending-item">
+                        <div class="trending-item">
                             <img src="SOME OTHER PROFILE PIC">
                             <div class="trending-user-info">
                                 <div class="trending-user-abbv">

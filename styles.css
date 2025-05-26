@@ -2,13 +2,304 @@
 1. Entire page will be a grid
 2. Sidebar will take up the entire 1st column and be 1fr. Rest of the content will be 4fr
 3. Sidebar will take up all rows within the 1st column
-4. Header will be another grid -- maybe 5 x 3
+4. Header will be another grid -- maybe 3 x 5 (rows x columns)
 5. Header first row will take up row 1 and all columns
 6. Header second row will take up rows 2 + 3 and all columns
 7. Main content will be another grid -- maybe 4 x 10 (rows x columns)
 8. Your Projects element will take up row 1, columns 1 - 3
 9. Project cards below Your Projects will take up rows 2 - 4, columns 1 -3
-10. Announcments element will take up row 1, column 4
-11. Content in Announcments content will take up row 2 - 3, column 4
+10. Announcements element will take up row 1, column 4
+11. Content in Announcements content will take up row 2 - 3, column 4
 12. Trending element will take up row 4, column 4
 */
+
+#container{
+    height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: repeat(5, minmax(100px, 4fr));
+}
+
+#sidebar{
+    background-color: lightblue;
+
+    grid-row: 1 / -1;
+    grid-column: 1 / 2;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(13, minmax(25px, 1fr));
+    gap: 20px;
+
+    font-weight: 700;
+}
+
+#header{
+    background-color: white;
+
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+#search-bar{
+    background-color: white;
+
+    margin-left: 20px;
+    
+    grid-column: 1 / 4;
+    grid-row: 1 / 3;
+}
+
+#search-bar-box{
+    background-color: lightgray;
+    flex: 2;
+}
+
+#condensed-user-info{
+    background-color: white;
+
+    grid-column: 4 / 6;
+    grid-row: 1 / 2;
+
+    margin-right: 30px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#expanded-user-info{
+    background-color: white;
+
+    margin-left: 20px;
+
+    grid-column: 1 / -1;
+    grid-row: 3 / 4;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#greet{
+    background-color: white;
+    font-weight: 700;
+    
+    display: flex;
+    justify-content: space-between;
+}
+
+#greet-msg{
+    display: flex;
+    flex-direction: column;
+}
+
+#admin-btns{
+    background-color: white;
+
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    align-items: center;
+    margin-right: 20px;
+    margin-left: 20px;    
+    gap: 20px;
+}
+
+#main-content{
+
+    background-color: lightgray;
+
+    grid-row: 2 / 6;
+    grid-column: 2 / 3;
+
+
+    display: grid;
+    grid-template-columns: repeat(10, minmax(50px, 1fr));
+    grid-template-rows: repeat(4, minmax(50px, 1fr));
+}
+
+#main-content-projects{
+
+    grid-row: 1 / -1;
+    grid-column: 1 / 8;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(30px, 1fr));
+    /* grid-template-rows: repeat(4, minmax(30px, 1fr)); */
+    grid-template-rows: minmax(30px, 1fr) minmax(30px, 100fr);
+    gap: 10px;
+}
+
+#project-header{
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+
+    font-size: 20px;
+}
+
+#project-card-container{
+    grid-column: 1 / -1;
+    grid-row: 2 / 3;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(30px, 1fr));
+    grid-template-rows: repeat(2, minmax(30px, 1fr));
+    grid-auto-rows: minmax(30px, 1fr);
+
+    gap: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.project-card{
+
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+
+    gap: 5px;
+
+    border-radius: 10px;
+    border: 2px solid lightgray;
+}
+
+.project-card-header{
+    font-size: 10px;
+    justify-self: left;
+}
+
+.project-card-detail{
+    font-size: 6px;
+    justify-self: center;
+}
+
+.project-card-btns{
+    justify-self: right;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#main-content-side{
+
+    background-color: lightgray;
+    
+    grid-column: 8 / 11;
+    grid-row: 1 / -1;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, minmax(20px, 1fr));
+
+    
+    border: 2px solid lightgray;
+}
+
+
+#announcements-container{
+    
+    grid-column: 1 / -1;
+    grid-row: 1 / 3;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+}
+
+#announcements-hdr{
+    grid-row: 1 / 2;
+    margin-left: 10px;
+}
+
+#announcements-container-content{
+    grid-row: 2 / 3;
+
+    border-radius: 10px;
+
+    margin: 10px;
+
+    min-height: 0;
+    overflow: auto;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+}
+
+.announcements-content{
+    display: flex;
+    flex-direction: column;  
+    align-items: center;
+    flex: 1;
+
+    width: 100%;
+    margin-top: 5px;
+    
+    font-size: 10px;
+    background-color: white;
+}
+
+.announcements-content::after {
+    align-self: stretch;
+    content: '';
+    border: 1px solid lightgray;
+
+    margin-top: 3px;
+}
+
+.announcements-content-hdr{
+    font-weight: 700;
+}
+
+.announcement-content-msg{
+    margin-left: 10px;
+    text-overflow: ellipsis;
+}
+
+#trending-container{
+
+    grid-column: 1 / -1;
+    grid-row: 3 / 5;
+    
+    display: flex;    
+    flex-direction: column;
+}
+
+#trending-hdr{
+    margin-left: 10px;
+}
+
+#trending-container-content{
+    margin: 10px;
+    background-color: lightgray;
+
+    border-radius: 10px;
+
+    min-height: 0;
+    overflow: auto;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.trending-item{
+    font-size: 10px;
+}
+
+.trending-user-abbv{
+    font-weight: 700;
+}
+
+
+
+
